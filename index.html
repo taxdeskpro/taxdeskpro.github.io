@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Tax Desk Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0F172A;
+            --primary-light: #1A2236;
+            --secondary: #10B981;
+            --secondary-dark: #059669;
+            --text-primary: #E8EDF5;
+            --text-secondary: #94A3B8;
+            --text-muted: #64748B;
+            --border-color: #2A3A5A;
+            --card-bg: #1A2236;
+            --radius: 16px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--primary); }
+        ::-webkit-scrollbar-thumb { background: var(--secondary); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--secondary-dark); }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            padding: 40px 50px 30px;
+            border-bottom: 2px solid var(--secondary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo-area { display: flex; align-items: center; gap: 16px; }
+
+        .logo-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--secondary);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: var(--primary);
+            box-shadow: 0 8px 24px rgba(16, 185, 129, 0.3);
+        }
+
+        .logo-text h1 { font-size: 26px; font-weight: 800; color: #FFFFFF; letter-spacing: -0.5px; }
+        .logo-text .tagline { font-size: 13px; color: var(--text-secondary); font-weight: 400; letter-spacing: 0.3px; }
+
+        .badge-container { display: flex; gap: 10px; flex-wrap: wrap; }
+
+        .badge {
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--secondary);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+
+        .badge.updated { background: rgba(239, 68, 68, 0.15); color: #F87171; border-color: rgba(239, 68, 68, 0.2); }
+
+        .content { padding: 40px 50px 50px; }
+
+        .section { margin-bottom: 40px; animation: fadeInUp 0.6s ease forwards; opacity: 0; }
+        .section:nth-child(1) { animation-delay: 0.05s; }
+        .section:nth-child(2) { animation-delay: 0.1s; }
+        .section:nth-child(3) { animation-delay: 0.15s; }
+        .section:nth-child(4) { animation-delay: 0.2s; }
+        .section:nth-child(5) { animation-delay: 0.25s; }
+        .section:nth-child(6) { animation-delay: 0.3s; }
+        .section:nth-child(7) { animation-delay: 0.35s; }
+        .section:nth-child(8) { animation-delay: 0.4s; }
+        .section:nth-child(9) { animation-delay: 0.45s; }
+        .section:nth-child(10) { animation-delay: 0.5s; }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+
+        .section-header .icon {
+            width: 32px;
+            height: 32px;
+            background: rgba(16, 185, 129, 0.12);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--secondary);
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .section-header h2 { font-size: 20px; font-weight: 700; color: #FFFFFF; letter-spacing: -0.3px; }
+        .section-header .number { font-size: 13px; color: var(--text-muted); font-weight: 500; }
+
+        .section p { color: var(--text-secondary); font-size: 15px; margin-bottom: 12px; }
+        .section p strong { color: var(--text-primary); }
+
+        .list-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 24px; margin: 12px 0; }
+        @media (max-width: 600px) { .list-grid { grid-template-columns: 1fr; } }
+
+        .list-item { display: flex; align-items: center; gap: 10px; padding: 6px 0; color: var(--text-secondary); font-size: 14px; }
+        .list-item .icon-check { color: var(--secondary); font-size: 14px; width: 20px; flex-shrink: 0; }
+        .list-item .icon-cross { color: #EF4444; font-size: 14px; width: 20px; flex-shrink: 0; }
+
+        .table-wrap { overflow-x: auto; margin: 12px 0; border-radius: 12px; border: 1px solid var(--border-color); }
+
+        table { width: 100%; border-collapse: collapse; font-size: 14px; }
+        table thead { background: rgba(16, 185, 129, 0.08); }
+        table th { padding: 12px 16px; text-align: left; font-weight: 600; color: var(--text-primary); font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px solid var(--border-color); }
+        table td { padding: 11px 16px; border-bottom: 1px solid var(--border-color); color: var(--text-secondary); }
+        table tr:last-child td { border-bottom: none; }
+        table td:first-child { font-weight: 500; color: var(--text-primary); }
+
+        .permission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0; }
+        @media (max-width: 600px) { .permission-grid { grid-template-columns: 1fr; } }
+
+        .permission-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 14px 18px;
+            transition: var(--transition);
+        }
+
+        .permission-card:hover { border-color: var(--secondary); background: rgba(16, 185, 129, 0.05); }
+        .permission-card .name { font-weight: 600; color: var(--text-primary); font-size: 14px; display: block; }
+        .permission-card .desc { color: var(--text-secondary); font-size: 13px; margin-top: 4px; }
+
+        .highlight-box {
+            background: rgba(16, 185, 129, 0.06);
+            border-left: 3px solid var(--secondary);
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin: 12px 0;
+        }
+
+        .highlight-box.blue { border-color: #60A5FA; background: rgba(96, 165, 250, 0.06); }
+        .highlight-box.orange { border-color: #F59E0B; background: rgba(245, 158, 11, 0.06); }
+        .highlight-box .title { font-weight: 600; color: var(--text-primary); font-size: 14px; }
+        .highlight-box .desc { color: var(--text-secondary); font-size: 14px; margin-top: 4px; }
+
+        .compliance-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 12px 0; }
+        @media (max-width: 600px) { .compliance-grid { grid-template-columns: 1fr; } }
+
+        .compliance-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 16px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .compliance-item .label { color: var(--text-secondary); font-size: 14px; }
+        .compliance-item .status { font-size: 13px; font-weight: 600; color: var(--secondary); }
+
+        .footer {
+            padding: 24px 50px;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .footer .copyright { color: var(--text-muted); font-size: 13px; }
+        .footer .copyright strong { color: var(--secondary); }
+        .footer-links { display: flex; gap: 16px; }
+        .footer-links a { color: var(--text-secondary); text-decoration: none; font-size: 13px; transition: var(--transition); }
+        .footer-links a:hover { color: var(--secondary); }
+
+        .summary-grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 12px; margin: 16px 0; }
+        @media (max-width: 768px) { .summary-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 400px) { .summary-grid { grid-template-columns: 1fr; } }
+
+        .summary-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 14px 16px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .summary-item:hover { border-color: var(--secondary); }
+        .summary-item .emoji { font-size: 24px; display: block; margin-bottom: 4px; }
+        .summary-item .label { color: var(--text-secondary); font-size: 12px; display: block; }
+        .summary-item .value { color: var(--text-primary); font-weight: 600; font-size: 15px; display: block; margin-top: 2px; }
+
+        @media (max-width: 768px) {
+            .header { padding: 30px 24px 24px; }
+            .content { padding: 24px 24px 32px; }
+            .footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+            .header-content { flex-direction: column; align-items: flex-start; }
+            .logo-text h1 { font-size: 22px; }
+            .section-header h2 { font-size: 18px; }
+        }
+
+        @media (max-width: 480px) {
+            body { padding: 10px; }
+            .header { padding: 20px 16px 18px; }
+            .content { padding: 16px 16px 24px; }
+            .footer { padding: 16px; }
+            .logo-icon { width: 44px; height: 44px; font-size: 22px; }
+            .logo-text h1 { font-size: 19px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <div class="header">
+            <div class="header-content">
+                <div class="logo-area">
+                    <div class="logo-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>Tax Desk Pro</h1>
+                        <span class="tagline">Privacy Policy</span>
+                    </div>
+                </div>
+                <div class="badge-container">
+                    <span class="badge"><i class="fas fa-check-circle"></i> GDPR Compliant</span>
+                    <span class="badge"><i class="fas fa-check-circle"></i> CCPA Compliant</span>
+                    <span class="badge updated"><i class="fas fa-clock"></i> Updated: Sep 20, 2026</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="content">
+
+            <!-- Quick Summary -->
+            <div class="section">
+                <div class="summary-grid">
+                    <div class="summary-item">
+                        <span class="emoji">🔒</span>
+                        <span class="label">Data Collection</span>
+                        <span class="value">None</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="emoji">📱</span>
+                        <span class="label">Data Storage</span>
+                        <span class="value">Local Only</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="emoji">🌐</span>
+                        <span class="label">Internet Required</span>
+                        <span class="value">No</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="emoji">📤</span>
+                        <span class="label">Data Sharing</span>
+                        <span class="value">Never</span>
+                    </div>
+                </div>
+                <p style="text-align: center; font-size: 14px; color: var(--text-muted); margin-top: 8px;">
+                    <i class="fas fa-shield-alt" style="color: var(--secondary);"></i>
+                    Your privacy is our priority. We collect <strong style="color: var(--secondary);">ZERO</strong> personal data.
+                </p>
+            </div>
+
+            <!-- Section 1 -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="icon"><i class="fas fa-info-circle"></i></div>
+                    <h2>Introduction</h2>
+                    <span class="number">01</span>
+                </div>
+                <p>
+                    Welcome to <strong>Tax Desk Pro</strong> ("we," "our," or "us"). We are committed to protecting your privacy. This Privacy Policy explains how we handle your information when you use our mobile application ("App").
+                </p>
+                <div class="highlight-box blue">
+                    <div class="title">📌 By using Tax Desk Pro, you agree to the terms of this Privacy Policy.</div>
+                </div>
+            </div>
+
+            <!-- Section 2 -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="icon"><i class="fas fa-database"></i></div>
+                    <h2>Information We Collect</h2>
+                    <span class="number">02</span>
+                </div>
+                <p><strong style="color: #EF4444;">❌ We DO NOT Collect:</strong></p>
+                <div class="list-grid">
+                    <span class="list-item"><span class="icon-cross"><i class="fas fa-times-circle"></i></span> Personal Information</span>
+                    <span class="list-item"><span class="icon-cross"><i class="fas fa-times-circle"></i></span> Location Data</span>
+                    <span class="list-item"><span class="icon-cross"><i class="fas fa-times-circle"></i></span> Contacts / Calendar</span>
+                    <span class="list-item"><span class="icon-cross"><i class="fas fa-times-circle"></i></span> Device Information</span>
+                    <span class="list-item"><span class="icon-cross"><i class="fas fa-times-circle"></i></span> SMS / Call Logs</span>
+                </div>
+
+                <p style="margin-top: 12px;"><strong style="color: #F59E0B;">📷 Camera & Photos (Limited Use):</strong></p>
+                <ul style="color: var(--text-secondary); font-size: 14px; padding-left: 20px; margin-top: 4px;">
+                    <li>Camera is used <strong>ONLY</strong> for capturing company logo and scanning GST QR codes.</li>
+                    <li>All images are stored <strong>locally on your device only</strong>.</li>
+                    <li>No images are uploaded to any server.</li>
+                </ul>
+
+                <p style="margin-top: 12px;"><strong style="color: #F59E0B;">📁 Storage (Limited Use):</strong></p>
+                <ul style="color: var(--text-secondary); font-size: 14px; padding-left: 20px; margin-top: 4px;">
+                    <li>Storage is used <strong>ONLY</strong> for saving PDF invoices and selecting logo/signature from gallery.</li>
+                    <li>No files are uploaded to any server.</li>
+                </ul>
+
+                <p style="margin-top: 12px;"><strong style="color: var(--secondary);">✅ We DO NOT Share:</strong></p>
+                <ul style="color: var(--text-secondary); font-size: 14px; padding-left: 20px; margin-top: 4px;">
+                    <li>We do not share, sell, or transfer any data to third parties.</li>
+                    <li>We do not use any third-party analytics or tracking services.</li>
+                </ul>
+            </div>
+
+            <!-- Section 3 -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="icon"><i class="fas fa-server"></i></div>
+                    <h2>Data Storage (Local Only)</h2>
+                    <span class="number">03</span>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>Data Type</th><th>Purpose</th><th>Storage Location</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Company Profiles & Parties</td><td>Business and customer details</td><td><span style="color: var(--secondary);">Device Storage (Local)</span></td></tr>
+                            <tr><td>Invoices & Billing Records</td><td>Generated tax invoices</td><td><span style="color: var(--secondary);">Device Storage (Local)</span></td></tr>
+                            <tr><td>Calculation History</td><td>Recent calculations</td><td><span style="color: var(--secondary);">Device Storage (Local)</span></td></tr>
+                            <tr><td>Theme Preference</td><td>Light/Dark/System mode</td><td><span style="color: var(--secondary);">Device Storage (Local)</span></td></tr>
+                            <tr><td>Company Logo/Signature</td><td>For invoices</td><td><span style="color: var(--secondary);">Device Storage (Local)</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="highlight-box">
+                    <div class="title">🔒 Important Notes:</div>
+                    <div class="desc">
+                        • All data is stored <strong>ONLY on your device</strong><br>
+                        • No data is transmitted to any server<br>
+                        • No cloud backup (unless you choose to do so manually)<br>
+                        • You can clear all data anytime from the app
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 4 -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="icon"><i class="fas fa-microchip"></i></div>
+                    <h2>How We Use Your Data</h2>
+                    <span class="number">04</span>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>Purpose</th><th>Description</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>App Functionality</td><td>To calculate GST, RCM, Margin, and Discounts</td></tr>
+                            <tr><td>Company Management</td><td>To store your business and customer profiles locally</td></tr>
+                            <tr><td>Invoice Generation</td><td>To create, manage, and save PDF invoices locally</td></tr>
+                            <tr><td>History Feature</td><td>To show your recent calculations</td></tr>
+                            <tr><td>Theme Preference</td><td>To remember your theme choice</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Section 5 - Permissions -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="icon"><i class="fas fa-key"></i></div>
+                    <h2>Permissions We Use</h2>
+                    <span class="number">05</span>
+                </div>
+                <div class="permission-grid">
+                    <div class="permission-card">
+                        <span class="name"><i class="fas fa-camera" style="color: var(--secondary);"></i> CAMERA</span>
+                        <span class="desc">For capturing company logo and scanning GST QR codes</span>
+                    </div>
+                    <div class="permission-card">
+                        <span class="name"><i class="fas fa-folder" style="color: var(--secondary);"></i> STORAGE (READ/WRITE)</span>
+                        <span class="desc">For saving PDF invoices and selecting images from gallery</span>
+                    </div>
+                    <div class="permission-card">
+                        <span class="name"><i class="fas fa-bell" style="color: var(--secondary);"></i> VIBRATE</span>
+                        <span class="desc">Optional - For notification vibration feedback</span>
+                    </div>
+                    <div class="permission-card">
+                        <span class="name"><i class="fas fa-power-off" style="color: var(--secondary);"></i> RECEIVE_BOOT_COMPLETED</span>
+                        <span class="desc">To schedule daily tips after device restart</span>
+                    </div>
+                    <div class="permission-card">
+                        <span class="name"><i class="fas fa-bell" style="color: var(--secondary);"></i> POST_NOTIFICATIONS</span>
+                        <span class="desc">(Android 13+) To show daily business tips</span>
+                    </div>
+                    <div class="permission-card">
+                        <span class="name"><i class="fas fa-clock" style="color: var(--secondary);"></i> SCHEDULE_EXACT_ALARM</span>
+                        <span class="desc">To send daily tip at 9:00 AM</span>
+                    </div>
+                </div>
+                <div class="highlight-box orange">
+                    <div class="title">⚠️ Note:</div>
+                    <div class="desc">
+                        Camera and Storage permissions are used <strong>ONLY</strong> for app features (invoice generation, logo capture, QR scanning). All data is stored locally on your device. No data is transmitted to any server.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 6 -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="icon"><i class="fas fa-bell"></i></div>
+                    <h2>Notifications</h2>
+                    <span class="number">06</span>
+                </div>
+                <ul style="color: var(--text-secondary); font-size: 14px; padding-left: 20px;">
+                    <li>We send <strong>one daily notification</strong> at 9:00 AM with a business tip</li>
+                    <li>You can disable notifications anytime from device settings</li>
+                    <li>No personalization is used - tips are randomly selected from a fixed list</li>
+                </ul>
+            </div>
+
+            <!-- Section 7 -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="icon"><i class="fas fa-shield-alt"></i></div>
+                    <h2>Third-Party Services</h2>
+                    <span class="number">07</span>
+                </div>
+                <p><strong style="color: #EF4444;">❌ We DO NOT use any third-party services for:</strong></p>
+                <div class="list-grid">
+                    <span class="list-item"><span class="icon-cross"><i class="fas fa-times-circle"></i></span> Analytics</span>
+                    <span class="list-item"><span class="icon-cross"><i class="fas fa-times-circle"></i></span> Advertising</span>
+                    <span class="list-item"><span class="icon-cross"><i class="fas fa-times-circle"></i></span> Data Collection</span>
+                    <span class="list-item"><span class="icon-cross"><i class="fas fa-times-circle"></i></span> Tracking</span>
+                    <span class="list-item"><span class="icon-cross"><i class="fas fa-times-circle"></i></span> Crash Reporting</span>
+                </div>
+                <div class="table-wrap" style="margin-top: 12px;">
+                    <table>
+                        <thead>
+                            <tr><th>Library</th><th>Purpose</th><th>Data Collection</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Flutter Framework</td><td>App Development</td><td><span style="color: var(--secondary);">None</span></td></tr>
+                            <tr><td>shared_preferences</td><td>Local Storage</td><td><span style="color: var(--secondary);">None (Local only)</span></td></tr>
+                            <tr><td>flutter_local_notifications</td><td>Notifications</td><td><span style="color: var(--secondary);">None</span></td></tr>
+                            <tr><td>provider</td><td>State Management</td><td><span style="color: var(--secondary);">None</span></td></tr>
+                            <tr><td>intl</td><td>Formatting</td><td><span style="color: var(--secondary);">None</span></td></tr>
+                            <tr><td>pdf / printing</td><td>PDF Generation</td><td><span style="color: var(--secondary);">None (Local only)</span></td></tr>
+                            <tr><td>image_picker</td><td>Camera & Gallery</td><td><span style="color: var(--secondary);">None (Local only)</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Section 8 -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="icon"><i class="fas fa-child"></i></div>
+                    <h2>Children's Privacy</h2>
+                    <span class="number">08</span>
+                </div>
+                <ul style="color: var(--text-secondary); font-size: 14px; padding-left: 20px;">
+                    <li>Our app is not directed at children under 13 years</li>
+                    <li>We do not knowingly collect information from children</li>
+                    <li>All calculations are financial tools meant for business users</li>
+                </ul>
+            </div>
+
+            <!-- Section 9 -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="icon"><i class="fas fa-lock"></i></div>
+                    <h2>Data Security</h2>
+                    <span class="number">09</span>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>Security Measure</th><th>Description</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>No Internet Required</td><td>All calculations and invoice generation are offline</td></tr>
+                            <tr><td>Local Storage Only</td><td>Data stays on your device</td></tr>
+                            <tr><td>No Transmission</td><td>No data sent anywhere</td></tr>
+                            <tr><td>Encryption</td><td>Shared preferences use Android/iOS built-in encryption</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Section 10 -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="icon"><i class="fas fa-user-check"></i></div>
+                    <h2>Your Rights</h2>
+                    <span class="number">10</span>
+                </div>
+                <p>You have the right to:</p>
+                <div class="list-grid">
+                    <span class="list-item"><span class="icon-check"><i class="fas fa-check-circle" style="color: var(--secondary);"></i></span> Access - View your stored data</span>
+                    <span class="list-item"><span class="icon-check"><i class="fas fa-check-circle" style="color: var(--secondary);"></i></span> Delete - Clear all history & companies</span>
+                    <span class="list-item"><span class="icon-check"><i class="fas fa-check-circle" style="color: var(--secondary);"></i></span> Opt-out - Disable notifications</span>
+                    <span class="list-item"><span class="icon-check"><i class="fas fa-check-circle" style="color: var(--secondary);"></i></span> Uninstall - Remove all data</span>
+                </div>
+                <div class="highlight-box">
+                    <div class="title">🗑️ To delete all data:</div>
+                    <div class="desc">
+                        1. Open the app<br>
+                        2. Go to My Companies or History<br>
+                        3. Delete data or clear history<br>
+                        4. OR Uninstall the app
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 11 -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="icon"><i class="fas fa-clock"></i></div>
+                    <h2>Data Retention</h2>
+                    <span class="number">11</span>
+                </div>
+                <ul style="color: var(--text-secondary); font-size: 14px; padding-left: 20px;">
+                    <li>Company profiles & invoices are stored <strong>until you delete them</strong></li>
+                    <li>Calculation history is stored <strong>until you clear it</strong></li>
+                    <li>Theme preference is stored <strong>until you change it</strong></li>
+                    <li>No automatic data deletion period</li>
+                </ul>
+            </div>
+
+            <!-- Section 12 -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="icon"><i class="fas fa-edit"></i></div>
+                    <h2>Changes to This Privacy Policy</h2>
+                    <span class="number">12</span>
+                </div>
+                <p>
+                    We may update this Privacy Policy occasionally. Any changes will be posted on this page with an updated "Last Updated" date. We recommend reviewing this page periodically.
+                </p>
+                <div class="highlight-box blue">
+                    <div class="title">📅 This Privacy Policy was last updated on: <strong style="color: var(--secondary);">September 14, 2026</strong></div>
+                </div>
+            </div>
+
+            <!-- Section 13 -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="icon"><i class="fas fa-envelope"></i></div>
+                    <h2>Contact Us</h2>
+                    <span class="number">13</span>
+                </div>
+                <p>If you have any questions about this Privacy Policy, please contact us:</p>
+                <div style="background: rgba(255,255,255,0.03); border-radius: 10px; padding: 16px 20px; border: 1px solid var(--border-color); margin-top: 8px;">
+                    <p style="margin-bottom: 4px;"><i class="fas fa-envelope" style="color: var(--secondary); width: 24px;"></i> <strong>Email:</strong> taxdeskpro.official@gmail.com</p>
+                </div>
+            </div>
+
+            <!-- Section 14 -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="icon"><i class="fas fa-exclamation-triangle"></i></div>
+                    <h2>Disclaimer</h2>
+                    <span class="number">14</span>
+                </div>
+                <div class="highlight-box orange">
+                    <div class="title" style="color: #F59E0B;">⚠️ This app is an independent third-party utility tool.</div>
+                    <div class="desc" style="color: var(--text-secondary);">
+                        • We are <strong>not affiliated</strong> with the Government of India<br>
+                        • We are <strong>not affiliated</strong> with the GST Council<br>
+                        • This app provides <strong>informational calculations only</strong><br>
+                        • Users should <strong>consult a qualified professional</strong> for tax advice
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 15 -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="icon"><i class="fas fa-check-double"></i></div>
+                    <h2>Compliance</h2>
+                    <span class="number">15</span>
+                </div>
+                <p>This Privacy Policy complies with:</p>
+                <div class="compliance-grid">
+                    <div class="compliance-item">
+                        <span class="label"><i class="fab fa-european-union" style="color: #60A5FA;"></i> GDPR</span>
+                        <span class="status">✅ Compliant</span>
+                    </div>
+                    <div class="compliance-item">
+                        <span class="label"><i class="fas fa-flag-usa" style="color: #60A5FA;"></i> CCPA</span>
+                        <span class="status">✅ Compliant</span>
+                    </div>
+                    <div class="compliance-item">
+                        <span class="label"><i class="fab fa-google-play" style="color: #60A5FA;"></i> Google Play Policies</span>
+                        <span class="status">✅ Compliant</span>
+                    </div>
+                    <div class="compliance-item">
+                        <span class="label"><i class="map-pin" style="color: #60A5FA;"></i> Indian IT Act</span>
+                        <span class="status">✅ Compliant</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 16 -->
+            <div class="section" style="margin-bottom: 0;">
+                <div class="section-header">
+                    <div class="icon"><i class="fas fa-handshake"></i></div>
+                    <h2>Consent</h2>
+                    <span class="number">16</span>
+                </div>
+                <p>
+                    By using Tax Desk Pro, you consent to this Privacy Policy. If you do not agree with this policy, please do not use the app.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <div class="copyright">
+                © 2026 <strong>Tax Desk Pro</strong> — All rights reserved.
+            </div>
+            <div class="footer-links">
+                <a href="#"><i class="fas fa-home"></i> Home</a>
+                <a href="#"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="#"><i class="fas fa-shield-alt"></i> Privacy</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
